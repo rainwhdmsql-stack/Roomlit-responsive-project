@@ -1,0 +1,56 @@
+.header {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background-color: antiquewhite;
+  padding: 0 3%;
+}
+.header-inner {
+  width: 100%;
+  height: 100%;
+}
+.header-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+/* 메뉴 영역 */
+.nav {
+  height: 100%;
+}
+.main {
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  width: auto;
+  height: 100%;
+  background-color: pink;
+}
+.main li {
+  width: auto;
+  white-space: nowrap;
+}
+
+/* util 메뉴 */
+.util {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  gap: 4%;
+  width: 20%;
+  height: 100%;
+  background-color: red;
+}
+.util .util-box {
+  white-space: nowrap;
+}
+
+/* 모바일 메뉴 */
+.mbt {
+  display: none;
+}

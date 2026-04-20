@@ -1,0 +1,17 @@
+.noto-sans-kr-<uniquifier > {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+// <weight>: Use a value from 300 to 700
+// <uniquifier>: Use a unique and descriptive class name
+
+.cormorant-garamond-<uniquifier> {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+

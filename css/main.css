@@ -1,0 +1,53 @@
+@import url("reset.css");
+@import url("font.css");
+@import url("header.css");
+
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.inner {
+  width: 90%;
+  margin: auto;
+  background-color: pink;
+}
+
+/* 로고 */
+h3 {
+  font-size: var(--web---logo);
+  color: var(--main-text);
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 2px;
+}
+
+:root {
+  /* Color styles */
+  --background-color: rgba(242, 237, 228, 1);
+  --main-text: rgba(44, 47, 51, 1);
+  --btn-txt: rgba(140, 130, 121, 1);
+  --trust--accent: rgba(27, 38, 59, 1);
+  --footer: rgba(26, 34, 56, 1);
+  --sub--accent: rgba(166, 139, 103, 1);
+  --sub-text: rgba(112, 108, 103, 1);
+  --content-text: rgba(61, 61, 61, 1);
+  --point: rgba(242, 153, 74, 1);
+  --u-x-line--bage: rgba(217, 209, 199, 1);
+
+  /* Text-size styles */
+  --web---logo: 17.600000381469727px;
+  --web--menu: 12px;
+  --web--contents-title: 56px;
+  --web--contents-sub: 11.199999809265137px;
+  --web--button: 12px;
+  --web---contents-txt: 12.5px;
+  --web--membership: 35px;
+  --web---collection--card--nametag: 11px;
+  --web---collection--card-title: 20px;
+  --web---collection--card-tag: 13px;
+  --web---collection--card-price: 14px;
+  --web---collection--card-button: 11px;
+  --tablet--contents-title: 48px;
+  --tablet--contents--membership: 25px;
+  --mobile--contents-title: 35px;
+  --mobile--membership: 20px;
+}
