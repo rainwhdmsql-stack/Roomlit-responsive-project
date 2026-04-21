@@ -1,54 +1,115 @@
 .header {
   position: relative;
   width: 100%;
-  height: 80px;
-  background-color: antiquewhite;
+  height: 100px;
+  background-color: var( --background-color);
   padding: 0 3%;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.05);
 }
 .header-inner {
   width: 100%;
   height: 100%;
 }
 .header-wrap {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
   text-align: center;
   align-items: center;
 }
 
+/* 로고 */
+.logo{
+  cursor: pointer;
+}
+
+
 /* 메뉴 영역 */
 .nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-70%);
   height: 100%;
+  margin-left: 60px;
 }
-.main {
+
+/* 메인 메뉴 */
+.main-menu {
   display: flex;
   align-items: center;
-  gap: 10%;
+  gap: clamp(18px, 5vw, 50px);
   width: auto;
   height: 100%;
-  background-color: pink;
+  font-size: var(--web--menu);
+  /* background-color: pink; */
 }
-.main li {
-  width: auto;
+.main-menu li {
   white-space: nowrap;
+}
+.main-menu a{
+  color: var(--main-text);
+}
+.main-menu a:hover{
+  color: var(--menu--hover);
+}
+/* 메뉴 - 라이팅 멤버십 */
+.main-menu li:nth-child(4){
+  font-weight: 700;
 }
 
 /* util 메뉴 */
 .util {
   display: flex;
-  justify-content: space-between;
   text-align: center;
   align-items: center;
-  gap: 4%;
-  width: 20%;
+  gap: clamp(20px, 5vw, 30px);
+  width: auto;
   height: 100%;
-  background-color: red;
+  margin-left: auto;
+  /* background-color: red; */
 }
+.util span, a{
+  font-size: var(--web--menu);
+}
+
+
+/* [로그인, 장바구니, 구독] */
 .util .util-box {
   white-space: nowrap;
 }
+.util i{
+  color: var(--sub-text);
+}
+.util-box a{
+  color: var(--main-text);
+}
+.util-box a:hover , .util i:hover{
+  color: rgb(112, 119, 124);
+}
+
+/* 구독 버튼 */
+.util-box-3{
+  width: 124px;
+  height: 50px;
+  border: 0;
+  border-radius: 6px;
+  background-color: var(--menu--subcribe-btn);
+  
+}
+.util-box-3 a{
+  line-height: 2.8;
+  color: var(--background-color);
+}
+.util-box-3 a:hover{
+  background-color: var(--point);
+  border-radius: 6px;
+  color: var(--web--menu);
+  
+}
+
+
 
 /* 모바일 메뉴 */
 .mbt {

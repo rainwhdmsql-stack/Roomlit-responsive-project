@@ -2,6 +2,7 @@
 @import url("font.css");
 @import url("header.css");
 
+/* 공통영역 */
 .wrap {
   width: 100%;
   height: 100%;
@@ -17,9 +18,20 @@ h3 {
   font-size: var(--web---logo);
   color: var(--main-text);
   font-family: "Cormorant Garamond", serif;
-  letter-spacing: 2px;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 
+/* 글씨체 */
+a,
+span,
+h4,
+p {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+
+/* 스타일 */
 :root {
   /* Color styles */
   --background-color: rgba(242, 237, 228, 1);
@@ -32,10 +44,12 @@ h3 {
   --content-text: rgba(61, 61, 61, 1);
   --point: rgba(242, 153, 74, 1);
   --u-x-line--bage: rgba(217, 209, 199, 1);
+  --menu--subcribe-btn: rgba(27, 38, 59, 0.5);
+  --menu--hover:rgb(112, 119, 124);
 
   /* Text-size styles */
-  --web---logo: 17.600000381469727px;
-  --web--menu: 12px;
+  --web---logo: 34px;
+  --web--menu: 18px;
   --web--contents-title: 56px;
   --web--contents-sub: 11.199999809265137px;
   --web--button: 12px;
