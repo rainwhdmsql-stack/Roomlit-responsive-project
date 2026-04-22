@@ -75,74 +75,108 @@
 
     <!-- CSS 연결 -->
     <link rel="stylesheet" href="css/main.css" />
+    <!-- js 연결 -->
+    <script src="JS/visual.js"></script>
   </head>
   <body>
     <!-- 전체 영역 -->
     <div class="wrap">
       <!-- 상단 -->
       <header class="header">
-        <!-- 인너 -->
-        <div class="header-inner">
-          <!-- 헤더 영역 -->
-          <div class="header-wrap">
-            <!-- 로고 영역 -->
-            <div class="logo">
-              <h3>ROOMLIT</h3>
+        <!-- 헤더 영역 -->
+        <div class="header-wrap">
+          <!-- 로고 영역 -->
+          <div class="logo">
+            <h3>ROOMLIT</h3>
+          </div>
+          <!-- 메뉴 영역 -->
+          <nav class="nav">
+            <ul class="main-menu">
+              <li><a href="#">스토리</a></li>
+              <li><a href="#">시뮬레이터</a></li>
+              <li><a href="#">컬렉션</a></li>
+              <li><a href="#">라이팅 멤버십</a></li>
+            </ul>
+          </nav>
+          <!-- util -->
+          <div class="util">
+            <!-- 로그인 -->
+            <div class="util-box util-box-1">
+              <a href="" class="utill-menu utill-1">
+                <i class="fa-solid fa-user"></i>
+                <span>로그인</span>
+              </a>
             </div>
-            <!-- 메뉴 영역 -->
-            <nav class="nav">
-              <ul class="main-menu">
-                <li><a href="#">스토리</a></li>
-                <li><a href="#">시뮬레이터</a></li>
-                <li><a href="#">컬렉션</a></li>
-                <li><a href="#">라이팅 멤버십</a></li>
-              </ul>
-            </nav>
-            <!-- util -->
-            <div class="util">
-              <!-- 로그인 -->
-              <div class="util-box util-box-1">
-                <a href="" class="utill-menu utill-1">
-                  <i class="fa-solid fa-user"></i>
-                  <span>로그인</span>
-                </a>
-              </div>
-              <!-- 장바구니 -->
-              <div class="util-box util-box-2">
-                <a href="" class="utill-menu utill-2">
-                  <i class="fa-solid fa-bag-shopping"></i>
-                  <span>장바구니</span>
-                </a>
-              </div>
-              <!-- 구독 버튼 -->
-              <div class="util-box util-box-3">
-                <a href="#">
-                  구독
-                </a>
-              </div>
+            <!-- 장바구니 -->
+            <div class="util-box util-box-2">
+              <a href="" class="utill-menu utill-2">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>장바구니</span>
+              </a>
             </div>
-            <!-- 모바일 메뉴 -->
-            <div class="mbt">
-              <!-- 햄버거 버튼 -->
-              <div class="mbt-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <!-- 구독 버튼 -->
-              <div class="util-box util-box-3">
-                <a href="#">
-                  <button>구독</button>
-                </a>
-              </div>
+            <!-- 구독 버튼 -->
+            <div class="util-box util-box-3">
+              <a href="#"> 구독 </a>
+            </div>
+          </div>
+          <!-- 모바일 메뉴 -->
+          <div class="mbt">
+            <!-- 햄버거 버튼 -->
+            <div class="mbt-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <!-- 구독 버튼 -->
+            <div class="util-box util-box-3">
+              <a href="#">
+                <button>구독</button>
+              </a>
             </div>
           </div>
         </div>
       </header>
       <!-- 메인 -->
-       <main class="main">
-        
-       </main>
+      <main class="main">
+        <div class="main-inner inner">
+          <!-- 비주얼 - 1 (서브)-->
+          <section class="sub-visual">
+            <h1 class="fade-text active">
+              일상의 온도를 바꾸는 <span>빛</span>의 경험
+            </h1>
+          </section>
+          <!-- 비주얼 - 2 (스크롤 인터렉션 - 메인 ) -->
+          <section class="main-visual-container">
+            <div class="main-visual-sticky">
+              <div class="bedroom-bg"></div>
+
+              <!-- 홈 화면 | 조명(고정) -->
+              <div class="fixed-lamp-container">
+                <img
+                  src="assets/images/light-fixed-1.png"
+                  alt="조명"
+                  class="lamp-image"
+                  id="lampImage"
+                />
+                <div class="lamp-inner-light" id="innerLight"></div>
+                <div class="light-glow" id="lightGlow"></div>
+              </div>
+
+              <!-- 조명 조절 버튼 -->
+              <div class="light-controls" id="controls">
+                <button onclick="changeLight('white')">공부등</button>
+                <button onclick="changeLight('studying')">일상 무드등</button>
+                <button onclick="changeLight('reading')">독서등</button>
+                <button onclick="changeLight('sleep')">휴식 / 취침등</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="next-section">
+            <h2>공간의 분위기를 완성하다</h2>
+          </section>
+        </div>
+      </main>
       <!-- 하단 -->
     </div>
   </body>
