@@ -136,9 +136,9 @@
           </div>
         </div>
       </header>
+
       <!-- 메인 -->
       <main class="main">
-        <div class="main-inner inner">
           <!-- 비주얼 - 1 (서브)-->
           <section class="sub-visual">
             <h1 class="fade-text active">
@@ -146,23 +146,28 @@
             </h1>
           </section>
           <!-- 비주얼 - 2 (스크롤 인터렉션 - 메인 ) -->
-          <section class="main-visual-container">
+          <section class="main-visual-container" id="stickySection">
             <div class="main-visual-sticky">
               <div class="bedroom-bg"></div>
 
-              <!-- 홈 화면 | 조명(고정) -->
-              <div class="fixed-lamp-container">
-                <img
-                  src="assets/images/light-fixed-1.png"
-                  alt="조명"
-                  class="lamp-image"
-                  id="lampImage"
-                />
-                <div class="lamp-inner-light" id="innerLight"></div>
-                <div class="light-glow" id="lightGlow"></div>
+              <div class="light-text-box" id="lightTextBox">
+                <h2>공간의 변화를 경험해보세요</h2>
               </div>
 
-              <!-- 조명 조절 버튼 -->
+              <!-- 홈화면 고정 램프 -->
+              <div class="fixed-lamp-container" id="lampContainer">
+                <div class="lamp-image-box">
+                  <img
+                    src="assets/images/light-fixed-1.png"
+                    alt="조명"
+                    class="lamp-image"
+                    id="lampImage"
+                  />
+                  <div class="lamp-inner-light" id="innerLight"></div>
+                  <div class="light-glow" id="lightGlow"></div>
+                </div>
+              </div>
+
               <div class="light-controls" id="controls">
                 <button onclick="changeLight('white')">공부등</button>
                 <button onclick="changeLight('studying')">일상 무드등</button>
@@ -175,7 +180,6 @@
           <section class="next-section">
             <h2>공간의 분위기를 완성하다</h2>
           </section>
-        </div>
       </main>
       <!-- 하단 -->
     </div>
