@@ -76,3 +76,5 @@ function changeLight(type) {
   inner.style.background = `radial-gradient(circle, ${color}1) 0%, ${color}0) 80%)`;
   glow.style.background = `radial-gradient(circle, ${color}0.6) 0%, ${color}0) 70%)`;
 }
+
+
