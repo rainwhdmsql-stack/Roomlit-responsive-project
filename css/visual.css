@@ -199,15 +199,12 @@ button:hover {
 
 /* 콘텐츠 타이틀 */
 .section-title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: 300;
+  font-size: var(--web--contents-title);
+    font-weight: 400;
   line-height: 1.2;
   margin-bottom: 0.5rem;
 }
-.section-title em {
-  font-style: italic;
-}
+
 
 
 
@@ -368,19 +365,33 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 .mood-desc {
+  font-style: var("Cormorant Garamond", serif);
+  font-size: 20px;
   padding: 1.5rem;
-  border-left: 1px solid rgba(201, 168, 76, 0.3);
+  border-left: 1px solid rgba(166, 139, 103, 0.6);
   margin-top: 1rem;
 }
 .mood-desc h4 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(20px, 5vw, 24px);
   font-weight: 300;
+  font-size: clamp(20px, 5vw, 24px);
   margin-bottom: 0.5rem;
-  color: rgba(61, 61, 61, 0.5);
+  color: rgba(61, 61, 61, 0.8);
 }
 .mood-desc p {
   font-size: clamp(15px, 5vw, 18px);
   line-height: 1.7;
   color: rgba(61, 61, 61, 0.5);
+}
+
+
+.fixed-lamp-container {
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+/* !important를 붙여 우선순위를 강제로 올립니다 */
+.fixed-lamp-container.is-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
