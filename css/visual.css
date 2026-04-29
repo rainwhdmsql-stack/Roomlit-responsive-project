@@ -191,10 +191,11 @@ button:hover {
 /* 콘텐츠 상단 */
 .section-eyebrow {
   font-size: var(--web--contents-sub);
-  letter-spacing: 0.35em;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
   color: var(--u-x-line--bage);
   margin-bottom: 1rem;
+  color: ;
 }
 
 /* 콘텐츠 타이틀 */

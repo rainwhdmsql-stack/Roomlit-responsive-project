@@ -19,7 +19,10 @@ body{
   margin: auto;
   background-color: pink;
 }
-
+img{
+  display: block;
+  width: 100%;
+}
 
 
 /* 로고 */
@@ -53,7 +56,7 @@ p {
   --sub-text: rgba(112, 108, 103, 1);
   --content-text: rgba(61, 61, 61, 1);
   --point: #F2994A;
-  --u-x-line--bage: rgba(217, 209, 199, 1);
+  --u-x-line--bage: rgb(156, 146, 133);
   --menu--subcribe-btn: rgba(27, 38, 59, 0.5);
   --menu--hover:rgb(112, 119, 124);
 

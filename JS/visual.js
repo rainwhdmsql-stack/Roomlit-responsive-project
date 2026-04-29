@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const vh = window.innerHeight;
     const rect = stickySection.getBoundingClientRect();
 
-    // [수정] 조명 가시성 제어: 섹션 하단이 화면의 50% 지점(vh * 0.5)에 도달하면 숨김
+    // [수정] 조명 가시성 제어: 섹션 하단이 화면의 50% 지점(vh * 0.75)에 도달하면 숨김
     // 더 빨리 사라지게 하려면 0.5를 0.8 또는 1.0으로 키우세요
-    if (rect.bottom < vh * 0.5) {
+    if (rect.bottom < vh * 0.75) {
       lampContainer.classList.add("is-hidden");
     } else {
       lampContainer.classList.remove("is-hidden");
