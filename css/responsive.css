@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+  .story-wrap {
+    flex-direction: column; /* 세로로 쌓기 */
+  }
+  
+  .story-img {
+    aspect-ratio: 16 / 9; /* 모바일에서는 가로형 비율로 변경 */
+  }
+}
