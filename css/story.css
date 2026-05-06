@@ -16,13 +16,16 @@
   gap: 20px;
   width: 100%;
 }
+
+/* 카드 */
 .story-1,
 .story-2,
 .story-3 {
   position: relative;
+  flex: 1;
   min-width: 0;
-  transition: flex 0.5s ease;
   overflow: hidden;
+  transition: flex 0.5s ease;
 }
 
 /* hover한 카드만 옆으로 확장 */
@@ -38,28 +41,35 @@
   flex: 1.8;
 }
 
+/* 이미지 영역 */
 .story-img {
   position: relative;
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
   overflow: hidden;
 }
+
 .story-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
+/* 기본 제목 */
 .story-des {
   position: absolute;
-  bottom: 10%;
   left: 10%;
+  bottom: 10%;
   z-index: 2;
   color: var(--background-color);
   transition: opacity 0.3s ease;
 }
+
 .story-des p {
   font-size: 25px;
+  margin: 0;
 }
 
 .story-des span {
@@ -71,35 +81,56 @@
 .story-hover {
   position: absolute;
   inset: 0;
+  z-index: 3;
+
   padding: 2rem;
-  color: var(--background-color);
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 0.35)
-  );
+  /* box-sizing: border-box; */
+
   display: flex;
   align-items: flex-end;
 
-  z-index: 3;
+  color: var(--background-color);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.78),
+    rgba(0, 0, 0, 0.35)
+  );
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
   transition:
     opacity 0.35s ease,
     visibility 0.35s ease;
-    pointer-events: none;
 }
 
-/* hover 시 */
+.hover-text {
+  max-width: 420px;
+  transform: translateY(20px);
+  transition: transform 0.45s ease;
+}
+
+.hover-title {
+  font-size: clamp(1rem, 0.5rem, 1.4rem);
+  line-height: 1.4;
+  margin: 0 0 1rem;
+  word-break: keep-all;
+}
+
+.hover-desc {
+  font-size: clamp(0.8rem, 5vw, 0.95rem);
+  line-height: 1.7;
+  margin: 0;
+  word-break: keep-all;
+}
+
+/* hover 활성 */
 .story-1:hover .story-hover,
 .story-2:hover .story-hover,
 .story-3:hover .story-hover {
   opacity: 1;
   visibility: visible;
-}
-
-hover-text {
-  max-width: 420px;
-  transform: translateY(20px);
-  transition: transform 0.45s ease;
 }
 
 .story-1:hover .hover-text,
@@ -114,15 +145,3 @@ hover-text {
   opacity: 0;
 }
 
-/* hover 시 기존 제목 숨김 */
-
-.hover-title {
-  font-size: 1.4rem;
-  line-height: 1.4;
-  margin-bottom: 1rem;
-}
-
-.hover-desc {
-  font-size: 0.95rem;
-  line-height: 1.7;
-}

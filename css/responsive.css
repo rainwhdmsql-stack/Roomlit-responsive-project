@@ -1,38 +1,59 @@
+/* 기존 pc용 */
+.story-wrap:hover .story-1,
+.story-wrap:hover .story-2,
+.story-wrap:hover .story-3 {
+  flex: 0.8;
+}
+
+.story-wrap .story-1:hover,
+.story-wrap .story-2:hover,
+.story-wrap .story-3:hover {
+  flex: 1.8;
+}
+
+/* =========================
+   768px 이하
+========================= */
 @media (max-width: 768px) {
   .story-wrap {
-    flex-direction: column; /* 세로로 쌓기 */
-  }
-
-  .story-img {
-    aspect-ratio: 16 / 9; /* 모바일에서는 가로형 비율로 변경 */
-  }
-
-  .story {
-    padding: 5rem 2rem;
-  }
-
-  .story-wrap {
-    flex-direction: column;
-    gap: 24px;
+    flex-direction: column !important;
+    gap: 32px;
   }
 
   .story-1,
   .story-2,
   .story-3 {
-    width: 100%;
     flex: none !important;
+    width: 100% !important;
+    overflow: visible;
   }
 
   .story-img {
-    aspect-ratio: 16 / 9;
-    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .story-hover {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    padding: 1.5rem 0 0;
+    background: none;
+
+    color: var(--background-color);
+    display: block;
+  }
+
+  .hover-text {
+    max-width: 100%;
+    transform: none;
+    transition: none;
   }
 
   .story-des {
-    display: block;
-    position: absolute;
-    bottom: 10%;
-    left: 8%;
+    position: static;
+    margin-top: 1rem;
     opacity: 1 !important;
   }
 
@@ -42,7 +63,73 @@
     opacity: 1 !important;
   }
 
+  .hover-title {
+    font-size: clamp(1.15rem, 3vw, 1.4rem);
+    line-height: 1.45;
+  }
+
+  .hover-desc {
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+    line-height: 1.8;
+  }
+}
+
+/* =========================
+   390px 이하
+========================= */
+@media (max-width: 390px) {
+  .story {
+    padding: 4rem 1rem;
+  }
+
+  .story-wrap {
+    gap: 18px;
+  }
+
+  .story-img {
+    aspect-ratio: 4 / 5;
+  }
+
+  .story-hover {
+    padding: 1.2rem;
+  }
+
   .story-des p {
-    font-size: 24px;
+    font-size: 22px;
+  }
+
+  .story-des span {
+    display: block;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+
+  .hover-title {
+    font-size: 1.1rem;
+    line-height: 1.35;
+  }
+
+  .hover-desc {
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .story-hover {
+    padding: 1.6rem;
+  }
+
+  .hover-title {
+    font-size: 1.15rem;
+    line-height: 1.45;
+    margin-bottom: 0.8rem;
+  }
+
+  .hover-desc {
+    font-size: 0.82rem;
+    line-height: 1.75;
+  }
+
+  .hover-text {
+    max-width: 90%;
   }
 }

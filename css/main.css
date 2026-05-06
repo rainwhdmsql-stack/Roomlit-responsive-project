@@ -3,10 +3,12 @@
 @import url("header.css");
 @import url("visual.css");
 @import url("story.css");
+@import url("responsive.css") 
 
 
-/* 공통영역 */
-body{
+
+/* 공통영역 */ 
+body {
   background-color: var(--background-color);
 }
 
@@ -19,11 +21,10 @@ body{
   margin: auto;
   background-color: pink;
 }
-img{
+img {
   display: block;
   width: 100%;
 }
-
 
 /* 로고 */
 h3 {
@@ -43,7 +44,6 @@ p {
   font-family: "Noto Sans KR", sans-serif;
 }
 
-
 /* 스타일 */
 :root {
   /* Color styles */
@@ -55,10 +55,10 @@ p {
   --sub--accent: rgba(166, 139, 103, 1);
   --sub-text: rgba(112, 108, 103, 1);
   --content-text: rgba(61, 61, 61, 1);
-  --point: #F2994A;
+  --point: #f2994a;
   --u-x-line--bage: rgb(156, 146, 133);
   --menu--subcribe-btn: rgba(27, 38, 59, 0.5);
-  --menu--hover:rgb(112, 119, 124);
+  --menu--hover: rgb(112, 119, 124);
 
   /* Text-size styles */
   --web---logo: 34px;
@@ -78,6 +78,3 @@ p {
   --mobile--contents-title: 35px;
   --mobile--membership: 20px;
 }
-
-
-
