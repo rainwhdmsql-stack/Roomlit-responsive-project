@@ -195,19 +195,15 @@ button:hover {
   text-transform: uppercase;
   color: var(--u-x-line--bage);
   margin-bottom: 1rem;
-  color: ;
 }
 
 /* 콘텐츠 타이틀 */
 .section-title {
   font-size: var(--web--contents-title);
-    font-weight: 400;
+  font-weight: 400;
   line-height: 1.2;
   margin-bottom: 0.5rem;
 }
-
-
-
 
 /* 슬라이드 비주얼(시뮬레이션) 영역 */
 .section-divider {
@@ -325,7 +321,7 @@ button:hover {
 .mood-tab.active,
 .mood-tab:hover {
   border-color: var(--trust--accent);
-  color: #F5EDD8;
+  color: #f5edd8;
   background: var(--trust--accent);
 }
 
@@ -337,8 +333,9 @@ button:hover {
 .ctrl-label {
   display: flex;
   justify-content: space-between;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
   letter-spacing: 0.1em;
+  margin-bottom: 1rem;
   color: var(--main-text);
 }
 .ctrl-label span {
@@ -376,14 +373,13 @@ input[type="range"]::-webkit-slider-runnable-track {
   font-weight: 300;
   font-size: clamp(20px, 5vw, 24px);
   margin-bottom: 0.5rem;
-  color: rgba(61, 61, 61, 0.8);
+  color: rgba(0, 0, 0, 0.8);
 }
 .mood-desc p {
   font-size: clamp(15px, 5vw, 18px);
   line-height: 1.7;
   color: rgba(61, 61, 61, 0.5);
 }
-
 
 .fixed-lamp-container {
   transition: opacity 0.5s ease;
