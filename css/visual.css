@@ -186,6 +186,7 @@ button:hover {
 #simulator {
   padding: 7rem 3rem;
   position: relative;
+  background-color: #fff;
 }
 
 /* 콘텐츠 상단 */
