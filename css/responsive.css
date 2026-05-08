@@ -112,6 +112,14 @@
     gap: 3rem;
   }
 
+  .collection-track {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .collection-info {
+    height: 145px;
+  }
 }
 
 /* =========================
@@ -202,6 +210,46 @@
   .hover-desc {
     font-size: clamp(0.85rem, 2vw, 0.95rem);
     line-height: 1.8;
+  }
+}
+
+/* 모바일: 2개씩 3줄 */
+@media (max-width: 600px) {
+  .lighting-collection {
+    padding: 4rem 1rem;
+  }
+  .collection-head {
+    align-items: flex-start;
+  }
+
+  .collection-track {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .collection-info {
+    height: 125px;
+    padding: 10px 9px;
+  }
+
+  .collection-brand {
+    font-size: 0.58rem;
+  }
+
+  .collection-name {
+    font-size: 0.72rem;
+    line-height: 1.15;
+    letter-spacing: 0;
+  }
+
+  .collection-price,
+  .collection-rent {
+    font-size: 0.6rem;
+  }
+
+  .collection-btn {
+    font-size: 0.6rem;
+    padding: 4px 8px;
   }
 }
 
