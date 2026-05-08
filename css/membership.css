@@ -1,0 +1,214 @@
+.lighting-membership {
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 3rem);
+}
+
+.membership-inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.membership-head {
+  margin-bottom: 2rem;
+}
+
+.membership-title {
+  margin-top: 0.8rem;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.25;
+  font-weight: 400;
+  color: var(--main-text);
+}
+
+.membership-title span {
+  color: var(--point);
+}
+
+.membership-desc {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: var(--main-text);
+}
+
+.membership-benefit-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.membership-benefit-card {
+  min-height: 180px;
+  padding: 2rem 1.5rem;
+  border: 1px solid rgba(27, 38, 59, 0.12);
+  background-color: rgba(255, 255, 255, 0.35);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+
+  text-align: center;
+}
+
+.benefit-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  background-color: var(--main-text);
+  color: var(--background-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.membership-benefit-card h3 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: var(--main-text);
+}
+
+.membership-benefit-card p {
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--content-text);
+}
+
+.membership-more-wrap {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.membership-more,
+.membership-box-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 140px;
+  height: 36px;
+  padding: 0 1rem;
+
+  font-size: 0.75rem;
+  color: #fff;
+  background-color: var(--point);
+}
+
+.membership-product-area {
+  margin-top: 3rem;
+}
+
+.membership-product-label {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--main-text);
+}
+
+.membership-tabs {
+  display: flex;
+  align-items: center;
+}
+
+.membership-tabs button {
+  min-width: 150px;
+  height: 42px;
+  border: none;
+  background-color: rgba(166, 139, 103, 0.35);
+  color: var(--main-text);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.membership-tabs button.active {
+  background-color: var(--trust--accent);
+  color: #fff;
+}
+
+.membership-product-box {
+  background-color: var(--trust--accent);
+  padding: clamp(1.5rem, 4vw, 3rem);
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.6fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: end;
+}
+
+.membership-product-text {
+  color: #fff;
+}
+
+.membership-product-kicker {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.membership-product-text strong {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.membership-product-text ul {
+  margin-bottom: 3rem;
+}
+
+.membership-product-text li {
+  position: relative;
+  padding-left: 0.8rem;
+  font-size: 0.82rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.membership-product-text li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+}
+
+.membership-box-btn {
+  background-color: #fff;
+  color: var(--main-text);
+}
+
+.membership-product-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 1.5rem;
+  overflow: hidden;
+}
+
+.membership-product-card {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.membership-product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1.25;
+  object-fit: cover;
+}
+
+.membership-product-card div {
+  min-height: 60px;
+  padding: 0.75rem;
+  background-color: rgba(166, 139, 103, 0.65);
+}
+
+.membership-product-card p {
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: #fff;
+}
+
+.membership-product-card span {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.75);
+}
