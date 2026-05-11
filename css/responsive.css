@@ -1,19 +1,16 @@
-/* =========================
+/* ═══════════════════════════════════════════════
    PC HOVER ONLY
-========================= */
-
+═══════════════════════════════════════════════ */
 @media (hover: hover) and (pointer: fine) {
   .util-box-3:hover {
     transform: translateY(-2px);
     box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
-
   .story-wrap:hover .story-1,
   .story-wrap:hover .story-2,
   .story-wrap:hover .story-3 {
     flex: 0.8;
   }
-
   .story-wrap .story-1:hover,
   .story-wrap .story-2:hover,
   .story-wrap .story-3:hover {
@@ -21,47 +18,40 @@
   }
 }
 
-/* =========================
-   1150px 이하
-========================= */
-
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — 1150px
+═══════════════════════════════════════════════ */
 @media (max-width: 1150px) {
   .main-menu {
     gap: clamp(14px, 3vw, 36px);
     font-size: clamp(14px, 1.35vw, 18px);
   }
-
   .util {
     gap: clamp(14px, 2vw, 24px);
   }
-
   .util span,
   .util a {
     font-size: clamp(14px, 1.35vw, 18px);
   }
 }
 
-/* =========================
-   1024px 이하
-========================= */
-
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — 1024px  (태블릿 이하)
+═══════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .header {
     height: 84px;
   }
-
   .nav,
   .util {
     display: none;
   }
-
   .mbt {
     display: flex;
     align-items: center;
     gap: 14px;
     margin-left: auto;
   }
-
   .mbt-btn {
     width: 34px;
     height: 24px;
@@ -70,7 +60,6 @@
     justify-content: space-between;
     cursor: pointer;
   }
-
   .mbt-btn span {
     display: block;
     width: 100%;
@@ -78,17 +67,13 @@
     background: var(--main-text);
     border-radius: 999px;
   }
-
   .mbt .util-box-3 {
     width: 78px;
     height: 40px;
     border-radius: 6px;
     background-color: var(--menu--subcribe-btn);
-    box-shadow: none;
-    transform: none;
     overflow: hidden;
   }
-
   .mbt .util-box-3 a {
     display: flex;
     align-items: center;
@@ -101,29 +86,32 @@
     white-space: nowrap;
   }
 
+  /* 공통 타이포 */
   .fade-text,
   .light-text-box h2,
   .section-title {
     font-size: var(--tablet--contents-title);
   }
 
+  /* 시뮬레이터 */
   .sim-layout {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
 
+  /* 컬렉션 */
   .collection-track {
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
   }
-
   .collection-info {
     height: 145px;
   }
+
+  /* ── 멤버십 1024 ── */
   .membership-benefit-list {
     grid-template-columns: repeat(3, 1fr);
   }
-
   .membership-benefit-card {
     min-height: 160px;
     padding: 1.5rem 1rem;
@@ -131,19 +119,20 @@
 
   .membership-product-box {
     grid-template-columns: 1fr;
-    align-items: start;
+    gap: 2rem;
   }
-
   .membership-product-list {
     grid-template-columns: repeat(3, 1fr);
   }
+  .membership-tabs button {
+    min-width: 120px;
+  }
 }
 
-/* =========================
-   768px 이하
-========================= */
-
-@media (max-width: 768px) {
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — 786px  (태블릿 세로)
+═══════════════════════════════════════════════ */
+@media (max-width: 786px) {
   h3 {
     font-size: 28px;
   }
@@ -153,7 +142,6 @@
     padding: 18vh 1.25rem 0;
     text-align: center;
   }
-
   .fade-text,
   .light-text-box h2,
   .section-title {
@@ -163,16 +151,13 @@
   .lamp-image {
     width: 190px;
   }
-
   .fixed-lamp-container.is-main .lamp-image {
     width: 115px;
   }
-
   .light-text-box {
     width: calc(100% - 2rem);
     top: 18%;
   }
-
   .light-controls {
     width: calc(100% - 9rem);
     bottom: 48px;
@@ -180,7 +165,6 @@
     justify-content: center;
     gap: 10px;
   }
-
   .light-controls button {
     min-width: 132px;
     min-height: 46px;
@@ -193,244 +177,118 @@
   #simulator {
     padding: 5rem 1.25rem;
   }
-
   .sim-layout {
     margin-top: 2.5rem;
   }
-
   .sim-room {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/1;
   }
 
+  /* Story */
   .story-wrap {
     flex-direction: column;
     gap: 32px;
     margin-top: 2.5rem;
   }
-
   .story-1,
   .story-2,
   .story-3 {
     flex: none;
     width: 100%;
   }
-
   .story-img {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4/3;
   }
-
   .hover-title {
     font-size: clamp(1.15rem, 3vw, 1.4rem);
     line-height: 1.45;
   }
-
   .hover-desc {
     font-size: clamp(0.85rem, 2vw, 0.95rem);
     line-height: 1.8;
   }
 
+  /* 컬렉션 */
+  .collection-track {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  /* ── 멤버십 786 ── */
+  .membership-benefit-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .membership-more-wrap {
+    justify-content: flex-start;
+  }
+  .membership-more {
+    width: 100%;
+    min-width: unset;
+    justify-content: center;
+  }
+
+  .membership-tabs {
+    width: 100%;
+  }
+  .membership-tabs button {
+    flex: 1;
+    min-width: unset;
+    height: 42px;
+    font-size: 0.72rem;
+  }
+
+  .membership-product-box {
+    grid-template-columns: 1fr;
+    border-radius: 0 0 6px 6px;
+    padding: 1.5rem;
+    gap: 1.75rem;
+  }
+
+  .membership-product-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  /* Footer */
   .footer-inner {
     grid-template-columns: 1fr;
     min-height: auto;
     padding: 3rem 2rem;
     gap: 2rem;
   }
-
   .footer-logo,
   .footer-nav,
   .footer-right {
     justify-self: center;
   }
-
   .footer-right {
     align-items: center;
   }
-
   .footer-nav {
     flex-wrap: wrap;
     row-gap: 0.8rem;
   }
 }
 
-/* 모바일: 2개씩 3줄 */
-@media (max-width: 600px) {
-  .lighting-collection {
-    padding: 4rem 1rem;
-  }
-  .collection-head {
-    align-items: flex-start;
-  }
-
-  .collection-track {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-
-  .collection-info {
-    height: 125px;
-    padding: 10px 9px;
-  }
-
-  .collection-brand {
-    font-size: 0.58rem;
-  }
-
-  .collection-name {
-    font-size: 0.72rem;
-    line-height: 1.15;
-    letter-spacing: 0;
-  }
-
-  .collection-price,
-  .collection-rent {
-    font-size: 0.6rem;
-  }
-
-  .collection-btn {
-    font-size: 0.6rem;
-    padding: 4px 8px;
-  }
-  .lighting-membership {
-    padding: 4rem 1.25rem;
-  }
-
-  .membership-benefit-list {
-    grid-template-columns: 1fr;
-  }
-
-  .membership-benefit-card {
-    min-height: 150px;
-  }
-
-  .membership-more-wrap {
-    justify-content: flex-start;
-  }
-
-  .membership-tabs {
-    overflow-x: auto;
-  }
-
-  .membership-tabs button {
-    min-width: 120px;
-    height: 38px;
-    flex-shrink: 0;
-  }
-
-  .membership-product-box {
-    padding: 1.25rem;
-  }
-
-  .membership-product-list {
-    grid-template-columns: repeat(3, 72%);
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-
-  .membership-product-card {
-    scroll-snap-align: start;
-  }
-
-  .membership-product-card div {
-    min-height: 54px;
-  }
-
-  .footer {
-    margin-top: 4rem;
-  }
-
-  .footer-inner {
-    padding: 2.5rem 1.25rem;
-    text-align: center;
-  }
-
-  .footer-logo {
-    font-size: 0.82rem;
-    letter-spacing: 0.35em;
-  }
-
-  .footer-nav {
-    flex-direction: column;
-    gap: 0.9rem;
-  }
-
-  .footer-nav a {
-    font-size: 0.7rem;
-  }
-
-  .footer-copy {
-    white-space: normal;
-    font-size: 0.64rem;
-    line-height: 1.5;
-  }
-
-  .footer-sns a {
-    width: 24px;
-    height: 24px;
-    font-size: 1rem;
-  }
-}
-
-/* =========================
-   480px 이하
-========================= */
-@media (max-width: 480px) {
-  .membership-title {
-    font-size: 1.65rem;
-  }
-
-  .membership-desc,
-  .membership-product-label {
-    font-size: 0.8rem;
-  }
-
-  .membership-benefit-card h3 {
-    font-size: 0.9rem;
-  }
-
-  .membership-benefit-card p {
-    font-size: 0.72rem;
-  }
-
-  .membership-product-kicker {
-    font-size: 0.78rem;
-  }
-
-  .membership-product-text strong {
-    font-size: 0.95rem;
-  }
-
-  .membership-product-text li {
-    font-size: 0.72rem;
-  }
-
-  .membership-product-list {
-    grid-template-columns: repeat(3, 78%);
-  }
-}
-
-/* =========================
-   390px 이하
-========================= */
-
-@media (max-width: 390px) {
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — 380px  (모바일)
+═══════════════════════════════════════════════ */
+@media (max-width: 380px) {
   .header {
     height: 72px;
     padding: 0 1rem;
   }
-
   h3 {
     font-size: 24px;
   }
-
   .mbt .util-box-3 {
     display: none;
   }
-
   .fade-text,
   .light-text-box h2,
   .section-title {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .mood-tab {
@@ -441,41 +299,159 @@
   .story {
     padding: 4rem 1rem;
   }
-
   .story-wrap {
     gap: 18px;
   }
-
   .story-img {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4/5;
   }
-
   .story-hover {
     padding: 1.6rem;
   }
-
   .story-des p {
     font-size: 22px;
   }
-
   .story-des span {
     display: block;
     margin-left: 0;
     margin-top: 4px;
   }
-
   .hover-text {
     max-width: 90%;
   }
-
   .hover-title {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.45;
     margin-bottom: 0.8rem;
   }
-
   .hover-desc {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     line-height: 1.75;
+  }
+
+  /* 컬렉션 2열 */
+  .lighting-collection {
+    padding: 4rem 1rem;
+  }
+  .collection-head {
+    align-items: flex-start;
+  }
+  .collection-track {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .collection-info {
+    height: 125px;
+    padding: 10px 9px;
+  }
+  .collection-brand {
+    font-size: 0.58rem;
+  }
+  .collection-name {
+    font-size: 0.72rem;
+    line-height: 1.15;
+    letter-spacing: 0;
+  }
+  .collection-price,
+  .collection-rent {
+    font-size: 0.6rem;
+  }
+  .collection-btn {
+    font-size: 0.6rem;
+    padding: 4px 8px;
+  }
+
+  /* ── 멤버십 380 ── */
+  .lighting-membership {
+    padding: 4rem 1rem;
+  }
+
+  .membership-head .section-title {
+    font-size: var(--mobile--membership);
+  }
+
+  .membership-benefit-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .membership-benefit-card {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    min-height: unset;
+    padding: 1.1rem 1rem;
+    gap: 12px;
+  }
+  .benefit-icon {
+    flex-shrink: 0;
+  }
+  .benefit-text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .membership-tabs {
+    width: 100%;
+  }
+  .membership-tabs button {
+    flex: 1;
+    min-width: unset;
+    height: 38px;
+    font-size: 0.68rem;
+  }
+
+  .membership-product-box {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+    border-radius: 0 0 6px 6px;
+    gap: 1.5rem;
+  }
+
+  .membership-price-row .price-amount {
+    font-size: 2rem;
+  }
+
+  /* 상품 카드: 가로 스크롤 */
+  .membership-product-list {
+    grid-template-columns: repeat(3, 72%);
+    gap: 0.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+  }
+  .membership-product-card {
+    scroll-snap-align: start;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 4rem;
+  }
+  .footer-inner {
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+  }
+  .footer-logo {
+    font-size: 0.82rem;
+    letter-spacing: 0.35em;
+  }
+  .footer-nav {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .footer-nav a {
+    font-size: 0.7rem;
+  }
+  .footer-copy {
+    white-space: normal;
+    font-size: 0.64rem;
+    line-height: 1.5;
+  }
+  .footer-sns a {
+    width: 24px;
+    height: 24px;
+    font-size: 1rem;
   }
 }

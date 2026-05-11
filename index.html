@@ -88,79 +88,57 @@
   <body>
     <!-- 전체 영역 -->
     <div class="wrap">
-      <!-- 상단 -->
+      <!-- ════════════════ HEADER ════════════════ -->
       <header class="header">
-        <!-- 헤더 영역 -->
         <div class="header-wrap">
-          <!-- 로고 영역 -->
-          <div class="logo">
-            <h3>ROOMLIT</h3>
-          </div>
-          <!-- 메뉴 영역 -->
+          <div class="logo"><h3>ROOMLIT</h3></div>
+
           <nav class="nav">
             <ul class="main-menu">
-              <li><a href="#">스토리</a></li>
-              <li><a href="#">시뮬레이터</a></li>
-              <li><a href="#">컬렉션</a></li>
-              <li><a href="#">라이팅 멤버십</a></li>
+              <li><a href=".story">스토리</a></li>
+              <li><a href="#simulator">시뮬레이터</a></li>
+              <li><a href=".lighting-collection">컬렉션</a></li>
+              <li><a href=".lighting-membership">라이팅 멤버십</a></li>
             </ul>
           </nav>
-          <!-- util -->
+
           <div class="util">
-            <!-- 로그인 -->
             <div class="util-box util-box-1">
               <a href="" class="utill-menu utill-1">
-                <i class="fa-solid fa-user"></i>
-                <span>로그인</span>
+                <i class="fa-solid fa-user"></i><span>로그인</span>
               </a>
             </div>
-            <!-- 장바구니 -->
             <div class="util-box util-box-2">
               <a href="" class="utill-menu utill-2">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span>장바구니</span>
+                <i class="fa-solid fa-bag-shopping"></i><span>장바구니</span>
               </a>
             </div>
-            <!-- 구독 버튼 -->
-            <div class="util-box util-box-3">
-              <a href="#"> 구독 </a>
-            </div>
+            <div class="util-box util-box-3"><a href="#">구독</a></div>
           </div>
-          <!-- 모바일 메뉴 -->
-          <div class="mbt">
-            <!-- 햄버거 버튼 -->
-            <div class="mbt-btn">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
 
-            <!-- 구독 버튼 -->
-            <div class="util-box util-box-3">
-              <a href="#">구독</a>
-            </div>
+          <div class="mbt">
+            <div class="mbt-btn"><span></span><span></span><span></span></div>
+            <div class="util-box util-box-3"><a href="#">구독</a></div>
           </div>
         </div>
       </header>
 
-      <!-- 메인 -->
+      <!-- ════════════════ MAIN ════════════════ -->
       <main class="main">
-        <!-- 비주얼 - 1 (서브)-->
+        <!-- 서브 비주얼 -->
         <section class="sub-visual">
           <h1 class="fade-text active">
             일상의 온도를 바꾸는 <span>빛</span>의 경험
           </h1>
         </section>
-        <!-- 비주얼 - 2 ( 스크롤 인터렉션 - 메인 ) -->
+
+        <!-- 메인 비주얼 (스크롤 인터랙션) -->
         <section class="main-visual-container" id="stickySection">
           <div class="main-visual-sticky">
             <div class="bedroom-bg"></div>
-
             <div class="light-text-box" id="lightTextBox">
               <h2>공간의 변화를 경험해보세요</h2>
             </div>
-
-            <!-- 홈화면 고정 램프 -->
             <div class="fixed-lamp-container" id="lampContainer">
               <div class="lamp-image-box">
                 <img
@@ -173,7 +151,6 @@
                 <div class="light-glow" id="lightGlow"></div>
               </div>
             </div>
-
             <div class="light-controls" id="controls">
               <button onclick="changeLight('white')">공부등</button>
               <button onclick="changeLight('studying')">일상 무드등</button>
@@ -183,13 +160,11 @@
           </div>
         </section>
 
-        <!-- brand story -->
+        <!-- 브랜드 스토리 -->
         <div class="story">
           <p class="section-eyebrow">Our Story</p>
           <h2 class="section-title">우리가 빛을 기록하는 방식</h2>
-          <!-- 브랜드 스토리 카드 영역 -->
           <div class="story-wrap">
-            <!-- 그룹핑 1 -->
             <div class="story-1">
               <div class="story-img">
                 <img src="assets/our-story/Frame 32.png" alt="철학" />
@@ -210,7 +185,6 @@
                 <p>철학<span>Philosophy</span></p>
               </div>
             </div>
-            <!-- 그룹핑 2 -->
             <div class="story-2">
               <div class="story-img">
                 <img src="assets/our-story/Frame 33.png" alt="가치" />
@@ -222,8 +196,7 @@
                     </h4>
                     <p class="hover-desc">
                       하이엔드의 진정한 가치는 소유의 과시가 아니라, 필요할 때
-                      최상의 미학을 향유하는 유연함에 있습니다. 우리는 당신의
-                      취향이 머무르지 않고 계속해서 탐험할 수 있도록 돕습니다.
+                      최상의 미학을 향유하는 유연함에 있습니다.
                     </p>
                   </div>
                 </div>
@@ -232,10 +205,9 @@
                 <p>가치<span>Value</span></p>
               </div>
             </div>
-            <!-- 그룹핑 3 -->
             <div class="story-3">
               <div class="story-img">
-                <img src="assets/our-story/Frame 32.png" alt="비전" />
+                <img src="assets/our-story/Frame 34.png" alt="비전" />
                 <div class="story-hover">
                   <div class="hover-text">
                     <h4 class="hover-title">
@@ -250,13 +222,13 @@
                 </div>
               </div>
               <div class="story-des">
-                <p>비전<span>Vison</span></p>
+                <p>비전<span>Vision</span></p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 비주얼 - 3 ( 슬라이드 바 인터렉션 - 시뮬레이터 ) -->
+        <!-- 시뮬레이터 -->
         <section id="simulator">
           <p class="section-eyebrow">Interactive Experience</p>
           <h2 class="section-title">
@@ -338,7 +310,6 @@
                   step="100"
                 />
               </div>
-              <!-- 슬라이더 버튼별 설명 -->
               <div class="mood-desc" id="moodDesc">
                 <h4>휴식 모드</h4>
                 <p>
@@ -353,18 +324,14 @@
         <!-- 상품 컬렉션 -->
         <section class="lighting-collection">
           <div class="collection-inner">
-            <!-- 상단 -->
             <div class="collection-head">
               <div class="collection-title-wrap">
                 <p class="section-eyebrow">LIGHTING COLLECTION</p>
                 <h2 class="section-title">당신의 공간에 어울릴 빛</h2>
               </div>
-              <a href="#" class="collection-more"> 더 둘러보기 → </a>
+              <a href="#" class="collection-more">더 둘러보기 →</a>
             </div>
-
-            <!-- 리스트 -->
             <ul class="collection-track">
-              <!-- item -->
               <li class="collection-item">
                 <article class="collection-card">
                   <div class="collection-img">
@@ -376,9 +343,7 @@
                   <div class="collection-info">
                     <div class="collection-text">
                       <p class="collection-brand">ARTEMIDE</p>
-
                       <h3 class="collection-name">ONFALE PICCOLO Table Lamp</h3>
-
                       <div class="collection-price-wrap">
                         <p class="collection-price">구매가 ₩ 765,000</p>
                         <p class="collection-rent">
@@ -386,7 +351,6 @@
                         </p>
                       </div>
                     </div>
-
                     <button class="collection-btn">담기 +</button>
                   </div>
                 </article>
@@ -402,9 +366,7 @@
                   <div class="collection-info">
                     <div class="collection-text">
                       <p class="collection-brand">ARTEMIDE</p>
-
                       <h3 class="collection-name">Dalu Table lamp</h3>
-
                       <div class="collection-price-wrap">
                         <p class="collection-price">구매가 ₩ 243,000</p>
                         <p class="collection-rent">
@@ -412,7 +374,6 @@
                         </p>
                       </div>
                     </div>
-
                     <button class="collection-btn">담기 +</button>
                   </div>
                 </article>
@@ -422,17 +383,15 @@
                   <div class="collection-img">
                     <img
                       src="assets/images/card-list/3.jpg"
-                      alt="PANTOP Portable Lamp | 팬탑 포터블 램프 (Pitch Brown)"
+                      alt="PANTOP Portable Lamp"
                     />
                   </div>
                   <div class="collection-info">
                     <div class="collection-text">
                       <p class="collection-brand">ARTEMIDE</p>
-
                       <h3 class="collection-name">
                         PANTOP Portable Lamp | 팬탑 포터블 램프 (Pitch Brown)
                       </h3>
-
                       <div class="collection-price-wrap">
                         <p class="collection-price">구매가 ₩ 290,000</p>
                         <p class="collection-rent">
@@ -440,7 +399,6 @@
                         </p>
                       </div>
                     </div>
-
                     <button class="collection-btn">담기 +</button>
                   </div>
                 </article>
@@ -450,17 +408,15 @@
                   <div class="collection-img">
                     <img
                       src="assets/images/card-list/4.jpg"
-                      alt="Wire Portable Lamp | 와이어 포터블 램프 (화이트)"
+                      alt="Wire Portable Lamp"
                     />
                   </div>
                   <div class="collection-info">
                     <div class="collection-text">
                       <p class="collection-brand">베르판</p>
-
                       <h3 class="collection-name">
                         Wire Portable Lamp | 와이어 포터블 램프 (화이트)
                       </h3>
-
                       <div class="collection-price-wrap">
                         <p class="collection-price">구매가 ₩ 420,000</p>
                         <p class="collection-rent">
@@ -468,7 +424,6 @@
                         </p>
                       </div>
                     </div>
-
                     <button class="collection-btn">담기 +</button>
                   </div>
                 </article>
@@ -484,9 +439,7 @@
                   <div class="collection-info">
                     <div class="collection-text">
                       <p class="collection-brand">LIMAS</p>
-
                       <h3 class="collection-name">KONOS FLOOR LAMP</h3>
-
                       <div class="collection-price-wrap">
                         <p class="collection-price">구매가 ₩ 450,000</p>
                         <p class="collection-rent">
@@ -494,7 +447,6 @@
                         </p>
                       </div>
                     </div>
-
                     <button class="collection-btn">담기 +</button>
                   </div>
                 </article>
@@ -504,17 +456,15 @@
                   <div class="collection-img">
                     <img
                       src="assets/images/card-list/6.jpg"
-                      alt="ONFALE PICCOLO Table Lamp"
+                      alt="SNOWMAN25 SOLID Pendant"
                     />
                   </div>
                   <div class="collection-info">
                     <div class="collection-text">
                       <p class="collection-brand">ILKW.</p>
-
                       <h3 class="collection-name">
                         SNOWMAN25 SOLID Pendant (3Colors)
                       </h3>
-
                       <div class="collection-price-wrap">
                         <p class="collection-price">구매가 ₩ 240,000</p>
                         <p class="collection-rent">
@@ -522,7 +472,6 @@
                         </p>
                       </div>
                     </div>
-
                     <button class="collection-btn">담기 +</button>
                   </div>
                 </article>
@@ -531,10 +480,12 @@
           </div>
         </section>
 
-        <!-- 라이팅 멤버십 -->
-        <!-- 라이팅 멤버십 -->
+        <!-- ════════════════════════════════════════
+             라이팅 멤버십  (개선된 섹션)
+        ════════════════════════════════════════ -->
         <section class="lighting-membership">
           <div class="membership-inner">
+            <!-- 헤더 -->
             <div class="membership-head">
               <p class="section-eyebrow">LIGHTING MEMBERSHIP</p>
               <h2 class="section-title">
@@ -543,141 +494,257 @@
               <p class="membership-desc">라이팅 멤버십의 특별함은?</p>
             </div>
 
+            <!-- 혜택 카드 3개 -->
             <ul class="membership-benefit-list">
               <li class="membership-benefit-card">
                 <div class="benefit-icon">
                   <i class="fa-solid fa-rotate"></i>
                 </div>
-                <h3>계절을 닮은 빛의 교체</h3>
-                <p>
-                  지루할 틈 없는 일상,<br />
-                  계절의 흐름에 맞춰<br />
-                  내 공간의 빛을 바꿔보세요.
-                </p>
+                <div class="benefit-text-wrap">
+                  <h3>계절을 닮은 빛의 교체</h3>
+                  <p>
+                    지루할 틈 없는 일상,<br />계절의 흐름에 맞춰<br />내 공간의
+                    빛을 바꿔보세요.
+                  </p>
+                </div>
               </li>
-
               <li class="membership-benefit-card">
                 <div class="benefit-icon">
                   <i class="fa-solid fa-hand-sparkles"></i>
                 </div>
-                <h3>도달 라이트 큐레이션 & 케어</h3>
-                <p>
-                  빛은 설치되는 것이 아니라,<br />
-                  유지되고 가꾸는 것입니다.
-                </p>
+                <div class="benefit-text-wrap">
+                  <h3>토탈 라이팅 큐레이션 &amp; 케어</h3>
+                  <p>
+                    빛은 설치되는 것이 아니라,<br />유지되고 가꾸는 것입니다.
+                  </p>
+                </div>
               </li>
-
               <li class="membership-benefit-card">
                 <div class="benefit-icon">
                   <i class="fa-solid fa-crown"></i>
                 </div>
-                <h3>부담 없는 프리미엄 라이트</h3>
-                <p>
-                  하이엔드 라이트 시작,<br />
-                  무겁게 소유하지 않고<br />
-                  가볍게 경험할 수 있어요.
-                </p>
+                <div class="benefit-text-wrap">
+                  <h3>부담 없는 프리미엄 라이프</h3>
+                  <p>
+                    하이엔드 라이팅의 시작,<br />무겁게 소유하지 않고<br />가볍게
+                    경험할 수 있어요.
+                  </p>
+                </div>
               </li>
             </ul>
 
+            <!-- CTA -->
             <div class="membership-more-wrap">
-              <a href="#" class="membership-more">나의 무드등 시작하기 →</a>
+              <a href="#" class="membership-more">첫 달 0원으로 시작하기 →</a>
             </div>
 
+            <!-- 등급별 탭 영역 -->
             <div class="membership-product-area">
               <p class="membership-product-label">
                 멤버십 등급별 혜택 알아보기
               </p>
 
-              <div class="membership-tabs">
-                <button class="active">ESSENTIAL</button>
-                <button>SIGNATURE</button>
-                <button>ARCHIVE</button>
+              <!-- 탭 바 -->
+              <div class="membership-tabs" role="tablist">
+                <button class="active" role="tab" data-panel="essential">
+                  ESSENTIAL
+                </button>
+                <button role="tab" data-panel="signature">SIGNATURE</button>
+                <button role="tab" data-panel="archive">ARCHIVE</button>
               </div>
 
-              <div class="membership-product-box">
-                <div class="membership-product-text">
-                  <p class="membership-product-kicker">
-                    공간의 작은 변화를 시작하는 감각적인 포인트 조명
-                  </p>
-
-                  <strong>Month ₩59,000</strong>
-
-                  <ul>
-                    <li>월별 테이블 스탠드 선택</li>
-                    <li>6개월 단위 조명 교체</li>
-                    <li>기본 클리닝</li>
-                    <li>내 공간에 맞춘 추천 예약</li>
-                    <li>멤버십 전용 시즌 혜택</li>
-                  </ul>
-
-                  <a href="#" class="membership-box-btn">라이팅 시작하기 →</a>
+              <!-- ─ ESSENTIAL ─ -->
+              <div class="membership-panel active" id="panel-essential">
+                <div class="membership-product-box">
+                  <div class="membership-product-text">
+                    <p class="membership-product-kicker">
+                      공간의 작은 변화를 시작하는 감각적인 포인트 조명
+                    </p>
+                    <div class="membership-price-row">
+                      <span class="price-label">Month</span>
+                      <span class="price-amount">₩59,000</span>
+                    </div>
+                    <ul>
+                      <li>입문형 테이블 스탠드</li>
+                      <li>6개월 단위 조명 교체</li>
+                      <li>기본 클리닝</li>
+                      <li>신규 라인업 우선 예약</li>
+                      <li>택배 배송 (자가 설치)</li>
+                    </ul>
+                    <a href="#" class="membership-box-btn">라이팅 시작하기 →</a>
+                  </div>
+                  <div class="membership-product-list">
+                    <article class="membership-product-card">
+                      <img
+                        src="assets/images/card-list/5.jpg"
+                        alt="KONOS FLOOR LAMP"
+                      />
+                      <div class="card-meta">
+                        <p>KONOS FLOOR LAMP</p>
+                        <span>ESSENTIAL</span>
+                      </div>
+                    </article>
+                    <article class="membership-product-card">
+                      <img
+                        src="assets/images/card-list/1.jpg"
+                        alt="ONFALE PICCOLO Table Lamp"
+                      />
+                      <div class="card-meta">
+                        <p>ONFALE PICCOLO Table Lamp</p>
+                        <span>ESSENTIAL</span>
+                      </div>
+                    </article>
+                    <article class="membership-product-card">
+                      <img
+                        src="assets/images/card-list/2.jpg"
+                        alt="Dalu Table lamp"
+                      />
+                      <div class="card-meta">
+                        <p>Dalu Table lamp</p>
+                        <span>ESSENTIAL</span>
+                      </div>
+                    </article>
+                  </div>
                 </div>
+              </div>
 
-                <div class="membership-product-list">
-                  <article class="membership-product-card">
-                    <img
-                      src="assets/images/card-list/5.jpg"
-                      alt="KONOS FLOOR LAMP"
-                    />
-                    <div>
-                      <p>KONOS FLOOR LAMP</p>
-                      <span>ESSENTIAL</span>
+              <!-- ─ SIGNATURE ─ -->
+              <div class="membership-panel" id="panel-signature">
+                <div class="membership-product-box">
+                  <div class="membership-product-text">
+                    <p class="membership-product-kicker">
+                      공간 전체를 아우르는 시그니처 조명 큐레이션
+                    </p>
+                    <div class="membership-price-row">
+                      <span class="price-label">Month</span>
+                      <span class="price-amount">₩99,000</span>
                     </div>
-                  </article>
+                    <ul>
+                      <li>플로어 &amp; 펜던트 조명 포함</li>
+                      <li>3개월 단위 조명 교체</li>
+                      <li>전문 클리닝 서비스</li>
+                      <li>1:1 인테리어 라이팅 컨설팅</li>
+                      <li>방문 설치 서비스</li>
+                    </ul>
+                    <a href="#" class="membership-box-btn">라이팅 시작하기 →</a>
+                  </div>
+                  <div class="membership-product-list">
+                    <article class="membership-product-card">
+                      <img
+                        src="assets/images/card-list/3.jpg"
+                        alt="PANTOP Portable Lamp"
+                      />
+                      <div class="card-meta">
+                        <p>PANTOP Portable Lamp</p>
+                        <span>SIGNATURE</span>
+                      </div>
+                    </article>
+                    <article class="membership-product-card">
+                      <img
+                        src="assets/images/card-list/4.jpg"
+                        alt="Wire Portable Lamp"
+                      />
+                      <div class="card-meta">
+                        <p>Wire Portable Lamp</p>
+                        <span>SIGNATURE</span>
+                      </div>
+                    </article>
+                    <article class="membership-product-card">
+                      <img
+                        src="assets/images/card-list/6.jpg"
+                        alt="SNOWMAN25 SOLID Pendant"
+                      />
+                      <div class="card-meta">
+                        <p>SNOWMAN25 SOLID Pendant</p>
+                        <span>SIGNATURE</span>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
 
-                  <article class="membership-product-card">
-                    <img
-                      src="assets/images/card-list/1.jpg"
-                      alt="ONFALE PICCOLO Table Lamp"
-                    />
-                    <div>
-                      <p>ONFALE PICCOLO Table Lamp</p>
-                      <span>ESSENTIAL</span>
+              <!-- ─ ARCHIVE ─ -->
+              <div class="membership-panel" id="panel-archive">
+                <div class="membership-product-box">
+                  <div class="membership-product-text">
+                    <p class="membership-product-kicker">
+                      희귀 아카이브 컬렉션으로 완성하는 엘리트 라이팅 경험
+                    </p>
+                    <div class="membership-price-row">
+                      <span class="price-label">Month</span>
+                      <span class="price-amount">₩159,000</span>
                     </div>
-                  </article>
-
-                  <article class="membership-product-card">
-                    <img
-                      src="assets/images/card-list/2.jpg"
-                      alt="Dalu Table lamp"
-                    />
-                    <div>
-                      <p>Dalu Table lamp</p>
-                      <span>ESSENTIAL</span>
-                    </div>
-                  </article>
+                    <ul>
+                      <li>아카이브 한정 에디션 제공</li>
+                      <li>월 단위 자유 교체</li>
+                      <li>전담 라이팅 디렉터 배정</li>
+                      <li>VIP 쇼룸 방문 서비스</li>
+                      <li>프리미엄 방문 설치 &amp; 스타일링</li>
+                    </ul>
+                    <a href="#" class="membership-box-btn">라이팅 시작하기 →</a>
+                  </div>
+                  <div class="membership-product-list">
+                    <article class="membership-product-card">
+                      <img
+                        src="assets/images/card-list/1.jpg"
+                        alt="ONFALE PICCOLO"
+                      />
+                      <div class="card-meta">
+                        <p>ONFALE PICCOLO (Archive Ed.)</p>
+                        <span>ARCHIVE</span>
+                      </div>
+                    </article>
+                    <article class="membership-product-card">
+                      <img
+                        src="assets/images/card-list/5.jpg"
+                        alt="KONOS FLOOR"
+                      />
+                      <div class="card-meta">
+                        <p>KONOS FLOOR (Archive Ed.)</p>
+                        <span>ARCHIVE</span>
+                      </div>
+                    </article>
+                    <article class="membership-product-card">
+                      <img
+                        src="assets/images/card-list/6.jpg"
+                        alt="SNOWMAN25"
+                      />
+                      <div class="card-meta">
+                        <p>SNOWMAN25 (Archive Ed.)</p>
+                        <span>ARCHIVE</span>
+                      </div>
+                    </article>
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- /membership-product-area -->
           </div>
+          <!-- /membership-inner -->
         </section>
       </main>
 
-      <!-- 하단 -->
+      <!-- ════════════════ FOOTER ════════════════ -->
       <footer class="footer">
         <div class="footer-inner">
           <h2 class="footer-logo">ROOMLIT</h2>
-
           <nav class="footer-nav" aria-label="푸터 메뉴">
             <a href="#">사업자정보 확인</a>
             <a href="#">이용약관</a>
             <a href="#">개인정보처리방침</a>
             <a href="#">고객센터</a>
           </nav>
-
           <div class="footer-right">
             <p class="footer-copy">
               © 2026 The Emotional Architect. All rights reserved.
             </p>
-
             <div class="footer-sns">
-              <a href="#" aria-label="facebook">
-                <i class="fa-brands fa-facebook-f"></i>
-              </a>
-              <a href="#" aria-label="instagram">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
+              <a href="#" aria-label="facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
             </div>
           </div>
         </div>

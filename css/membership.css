@@ -8,19 +8,14 @@
   margin: 0 auto;
 }
 
+/* 헤더 */
 .membership-head {
   margin-bottom: 2rem;
 }
-
-.membership-title {
+.membership-head .section-title {
   margin-top: 0.8rem;
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  line-height: 1.25;
-  font-weight: 400;
-  color: var(--main-text);
 }
-
-.membership-title span {
+.membership-head .section-title span {
   color: var(--point);
 }
 
@@ -30,10 +25,11 @@
   color: var(--main-text);
 }
 
+/* 혜택 카드 3개 */
 .membership-benefit-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1rem, 2vw, 1.5rem);
+  gap: clamp(0.75rem, 2vw, 1.5rem);
 }
 
 .membership-benefit-card {
@@ -41,31 +37,37 @@
   padding: 2rem 1.5rem;
   border: 1px solid rgba(27, 38, 59, 0.12);
   background-color: rgba(255, 255, 255, 0.35);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.9rem;
-
   text-align: center;
+  transition:
+    box-shadow 0.22s ease,
+    transform 0.22s ease;
+}
+
+.membership-benefit-card:hover {
+  box-shadow: 0 4px 20px rgba(27, 38, 59, 0.08);
+  transform: translateY(-2px);
 }
 
 .benefit-icon {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 4px;
-  background-color: var(--main-text);
+  background-color: var(--trust--accent);
   color: var(--background-color);
-
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1rem;
 }
 
 .membership-benefit-card h3 {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.35;
   color: var(--main-text);
 }
@@ -76,27 +78,37 @@
   color: var(--content-text);
 }
 
+/* CTA 버튼 행 */
 .membership-more-wrap {
   margin-top: 2rem;
   display: flex;
   justify-content: flex-end;
 }
 
-.membership-more,
-.membership-box-btn {
+.membership-more {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  min-width: 140px;
-  height: 36px;
-  padding: 0 1rem;
-
-  font-size: 0.75rem;
+  gap: 6px;
+  min-width: 190px;
+  height: 44px;
+  padding: 0 1.25rem;
+  font-size: 0.8rem;
   color: #fff;
   background-color: var(--point);
+  border-radius: 3px;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  white-space: nowrap;
+  width: auto;
+}
+.membership-more:hover {
+  background-color: #d4803a;
+  transform: translateX(2px);
 }
 
+/* 등급 탭 영역 */
 .membership-product-area {
   margin-top: 3rem;
 }
@@ -107,19 +119,34 @@
   color: var(--main-text);
 }
 
+/* 탭 바 */
 .membership-tabs {
   display: flex;
   align-items: center;
+  width: fit-content;
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
 }
 
 .membership-tabs button {
   min-width: 150px;
-  height: 42px;
+  height: 44px;
   border: none;
-  background-color: rgba(166, 139, 103, 0.35);
+  background-color: rgba(166, 139, 103, 0.28);
+  color: var(--sub-text);
+  font-size: 0.78rem;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.08em;
+  padding: 0;
+  border-radius: 0;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.membership-tabs button:hover:not(.active) {
+  background-color: rgba(166, 139, 103, 0.45);
   color: var(--main-text);
-  font-size: 0.8rem;
-  cursor: pointer;
 }
 
 .membership-tabs button.active {
@@ -127,88 +154,141 @@
   color: #fff;
 }
 
-.membership-product-box {
-  background-color: var(--trust--accent);
-  padding: clamp(1.5rem, 4vw, 3rem);
-
-  display: grid;
-  grid-template-columns: 0.9fr 1.6fr;
-  gap: clamp(2rem, 4vw, 4rem);
-  align-items: end;
+/* 탭 패널 (다크 박스) */
+.membership-panel {
+  display: none;
+}
+.membership-panel.active {
+  display: block;
 }
 
+.membership-product-box {
+  background-color: var(--trust--accent);
+  border-radius: 0 6px 6px 6px;
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: start;
+}
+
+/* 텍스트 영역 */
 .membership-product-text {
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .membership-product-kicker {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 1.5rem;
 }
 
-.membership-product-text strong {
-  display: block;
+.membership-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
   margin-bottom: 1.5rem;
-  font-size: 1.15rem;
-  font-weight: 500;
+}
+.membership-price-row .price-label {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.membership-price-row .price-amount {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #fff;
 }
 
 .membership-product-text ul {
-  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 2rem;
 }
-
 .membership-product-text li {
   position: relative;
-  padding-left: 0.8rem;
+  padding-left: 14px;
   font-size: 0.82rem;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.82);
 }
-
 .membership-product-text li::before {
-  content: "·";
+  content: "";
   position: absolute;
   left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--point);
 }
 
 .membership-box-btn {
-  background-color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: fit-content;
+  min-width: 160px;
+  height: 44px;
+  padding: 0 1.25rem;
+  font-size: 0.78rem;
   color: var(--main-text);
+  background: var(--background-color);
+  border-radius: 3px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  white-space: nowrap;
+}
+.membership-box-btn:hover {
+  background: rgba(242, 237, 228, 0.85);
 }
 
+/* 상품 카드 리스트 */
 .membership-product-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(180px, 1fr));
-  gap: 1.5rem;
-  overflow: hidden;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
 .membership-product-card {
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  overflow: hidden;
+  transition: transform 0.25s ease;
+}
+.membership-product-card:hover {
+  transform: translateY(-3px);
 }
 
 .membership-product-card img {
   width: 100%;
-  aspect-ratio: 1 / 1.25;
+  aspect-ratio: 1/1.25;
   object-fit: cover;
+  display: block;
 }
 
-.membership-product-card div {
-  min-height: 60px;
-  padding: 0.75rem;
-  background-color: rgba(166, 139, 103, 0.65);
+.membership-product-card .card-meta {
+  padding: 0.7rem 0.85rem 0.85rem;
+  background-color: rgba(166, 139, 103, 0.55);
 }
-
-.membership-product-card p {
-  font-size: 0.75rem;
+.membership-product-card .card-meta p {
+  font-size: 0.72rem;
   line-height: 1.35;
   color: #fff;
+  margin-bottom: 3px;
 }
-
-.membership-product-card span {
+.membership-product-card .card-meta span {
   display: block;
-  margin-top: 0.35rem;
-  font-size: 0.65rem;
-  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.62rem;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.05em;
 }
