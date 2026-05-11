@@ -1,4 +1,4 @@
-.lighting-membership {
+#lighting-membership {
   padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 3rem);
 }
 
@@ -109,7 +109,7 @@
 }
 
 /* 등급 탭 영역 */
-.membership-product-area {
+#membership-product-area {
   margin-top: 3rem;
 }
 

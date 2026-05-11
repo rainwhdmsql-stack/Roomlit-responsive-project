@@ -1,4 +1,4 @@
-.lighting-collection {
+#lighting-collection {
   padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 3rem);
 }
 .collection-inner {

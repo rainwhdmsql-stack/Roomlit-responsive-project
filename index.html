@@ -84,6 +84,7 @@
     <!-- js 연결 -->
     <script src="JS/visual.js"></script>
     <script src="JS/slide_visual.js"></script>
+    <script src="JS/membership.js"></script>
   </head>
   <body>
     <!-- 전체 영역 -->
@@ -95,10 +96,10 @@
 
           <nav class="nav">
             <ul class="main-menu">
-              <li><a href=".story">스토리</a></li>
+              <li><a href="#story">스토리</a></li>
               <li><a href="#simulator">시뮬레이터</a></li>
-              <li><a href=".lighting-collection">컬렉션</a></li>
-              <li><a href=".lighting-membership">라이팅 멤버십</a></li>
+              <li><a href="#lighting-collection">컬렉션</a></li>
+              <li><a href="#lighting-membership">라이팅 멤버십</a></li>
             </ul>
           </nav>
 
@@ -161,7 +162,7 @@
         </section>
 
         <!-- 브랜드 스토리 -->
-        <div class="story">
+        <div id="story">
           <p class="section-eyebrow">Our Story</p>
           <h2 class="section-title">우리가 빛을 기록하는 방식</h2>
           <div class="story-wrap">
@@ -322,7 +323,7 @@
         </section>
 
         <!-- 상품 컬렉션 -->
-        <section class="lighting-collection">
+        <section id="lighting-collection">
           <div class="collection-inner">
             <div class="collection-head">
               <div class="collection-title-wrap">
@@ -483,7 +484,7 @@
         <!-- ════════════════════════════════════════
              라이팅 멤버십  (개선된 섹션)
         ════════════════════════════════════════ -->
-        <section class="lighting-membership">
+        <section id="lighting-membership">
           <div class="membership-inner">
             <!-- 헤더 -->
             <div class="membership-head">
@@ -535,11 +536,11 @@
 
             <!-- CTA -->
             <div class="membership-more-wrap">
-              <a href="#" class="membership-more">첫 달 0원으로 시작하기 →</a>
+              <a href="#membership-product-area" class="membership-more">첫 달 0원으로 시작하기 →</a>
             </div>
 
             <!-- 등급별 탭 영역 -->
-            <div class="membership-product-area">
+            <div id="membership-product-area">
               <p class="membership-product-label">
                 멤버십 등급별 혜택 알아보기
               </p>
